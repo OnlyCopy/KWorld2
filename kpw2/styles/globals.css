@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black w-screen h-screen overflow-hidden;
+    font-family: 'Tapestry', 'cursive';
+  }
+
+  .navigation li {
+    @apply hover:text-green-300
+  }
+
+  input {
+    @apply text-black;
+  }
+
+  .m-icon {
+    @apply lg:hidden;
+  }
+
+  .nav-text {
+    @apply hidden lg:inline;
+  }
+
+  .contact-input {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 transition-all placeholder-gray-500 focus:border-red-500/40 focus:text-red-500/40
+}
+}
