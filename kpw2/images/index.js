@@ -8,6 +8,10 @@ import Girl1 from './song/k1.jpg';
 import Girl2 from './song/k2.jpg';
 import Grim from './song/grim.png';
 import Reset from './song/Reset.png';
+import ManB from './mannequin/manb.png';
+import ManW from './mannequin/manw.png';
+import ManBanner from './mannequin/manbanner.png';
+
 
 
 export {
@@ -21,4 +25,7 @@ export {
     Girl2,
     Grim,
     Reset,
+    ManBanner,
+    ManB,
+    ManW,
 }

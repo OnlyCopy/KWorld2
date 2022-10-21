@@ -7,7 +7,7 @@ function ContactMe() {
 
     const { register, handleSubmit } = useForm();
 
-    const onSubmit = (formData) => {
+    const onSubmit = (formData : any) => {
         window.location.href = `mailto:trippiethegeneral@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.subject}. ${formData.message} (${formData.email})`;
     }
 
@@ -16,7 +16,7 @@ function ContactMe() {
         <h3 className='absolute top-24 uppercase tracking-[20px] text-white text-2xl'>Contact</h3>
 
         <div className='flex flex-col space-y-10'>
-            <h4 className='text-4xl font-semibold text-center'>
+            <h4 className='text-3xl md:text-4xl font-semibold text-center'>
                Have a question? {" "} <span className='decoration-red-500/50 underline'>Contact me.</span>
             </h4>
 
@@ -30,7 +30,7 @@ function ContactMe() {
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-fit mx-auto'>
-                <div className='flex space-x-2'>
+                <div className='flex flex-col space-y-2 md:space-y-0 md:flex-row md:space-x-2'>
                     <input {...register('name')} placeholder='Name' className='contact-input' type="text" />
                     <input {...register('email')} placeholder='Email' className='contact-input' type="email" />
                 </div>

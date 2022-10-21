@@ -23,14 +23,14 @@ function Music( {albums, latestTracks} : Props ) {
                         <h1 className='text-3xl tracking-[20px]'>Latest from K Pierre</h1>
                     </div>
                 </div>
-                <div className='flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4 flex-shrink-0 items-center'>
+                <div className='flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4 flex-shrink-0 items-center overflow-x-scroll lg:overflow-hidden px-3'>
                     {latestTracks.map((track) => (
                         <LatestTrackCard key={track._id} track={track} />
                     ))}
                 </div>
             </section>
 
-            <section className='pb-8 flex flex-col items-center md:items-stretch'>
+            <section className='pb-8 flex flex-col items-center md:items-stretch md:px-3'>
                 <div className='flex flex-col md:flex-row md:justify-between items-center mb-2'>
                     <div>
                         <h1 className='font-bold text-2xl'>Albums & Ep's</h1>
@@ -39,24 +39,13 @@ function Music( {albums, latestTracks} : Props ) {
                         <span className='text-gray-400 font-light'>View all</span>
                     </div>
                 </div>
-                <div className='grid grid-cols-2 space-y-4 items-center md:flex md:flex-row md:space-x-4 md:space-y-0'>
+                <div className='grid grid-cols-2 items-center md:flex md:flex-row md:space-x-4 md:space-y-0'>
                     {albums?.map((album) => (
                         <SongCard album={album} key={album._id}/>
                     ))}
                 </div>
             </section>
 
-            <section className='pb-8 space-y-2 items-center md:items-start text-center flex flex-col'>
-                <div>
-                    <h1 className='text-2xl font-bold'>Listen to K Pierre</h1>
-                </div>
-                <div className='flex flex-row space-x-4 items-center'>
-                    <SocialIcon url="https://soundcloud.com/its-minime" target="_blank" />
-                    <SocialIcon url="https://www.youtube.com/channel/UC7-iLTekrzSAj1q_YKI-6iw" target="_blank" />
-                    <SocialIcon url="https://open.spotify.com/artist/0BmpvDkzjv2SQuKPHTwevI" target="_blank" />
-                    <SocialIcon url="https://music.apple.com/us/artist/k-pierre/513317653" target="_blank" />
-                </div>
-            </section>
         </div>
     </div>
   )

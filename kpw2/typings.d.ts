@@ -24,7 +24,7 @@ export interface Album extends SanityBody {
    
 export interface TrackInfo extends SanityBody {
     _type: 'track';
-    image: Image;
+    trackCover: Image;
     title: string;
    }
    
