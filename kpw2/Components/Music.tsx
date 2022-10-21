@@ -36,7 +36,9 @@ function Music( {albums, latestTracks} : Props ) {
                         <h1 className='font-bold text-2xl'>Albums & Ep's</h1>
                     </div>
                     <div className='cursor-pointer'>
-                        <span className='text-gray-400 font-light'>View all</span>
+                        <Link href="/albums/tracks">
+                            <span className='text-gray-400 font-light'>View all</span>
+                        </Link>
                     </div>
                 </div>
                 <div className='grid grid-cols-2 items-center md:flex md:flex-row md:space-x-4 md:space-y-0'>

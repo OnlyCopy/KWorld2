@@ -26,6 +26,7 @@ export interface TrackInfo extends SanityBody {
     _type: 'track';
     trackCover: Image;
     title: string;
+    release: date;
    }
    
 export interface LatestTrack extends SanityBody {

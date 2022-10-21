@@ -19,6 +19,9 @@ function TrackCard ( {track} : Props ) {
             <div>
                 <h1 className='text-lg'>{track?.title}</h1>
             </div>
+            <div>
+              <span className='text-sm text-gray-400'>{track?.release}</span>
+            </div>
         </div>
     </div>
   )

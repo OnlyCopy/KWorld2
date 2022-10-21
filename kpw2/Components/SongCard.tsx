@@ -10,9 +10,9 @@ type Props = {
 
 function SongCard ( {album} : Props ) {
   return (
-    <div className='flex flex-col space-y-4 text-left'>
+    <div className='flex flex-col space-y-4 text-left hover:opacity-80 cursor-pointer'>
         <div className='relative w-36 h-36'>
-            <Image src={urlFor(album?.trackCover).url()} objectFit='contain' layout='fill' />
+            <Image className='rounded-md' src={urlFor(album?.trackCover).url()} objectFit='contain' layout='fill' />
         </div>
         <div>
             <div>

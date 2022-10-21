@@ -1,9 +1,9 @@
 import { GetStaticProps } from "next";
 import Head from "next/head";
-import Navbar_2 from "../../Components/Navbar_2";
-import SongCard from "../../Components/SongCard";
-import TrackCard from "../../Components/TrackCard";
+import Image from "next/image";
+import Link from "next/link";
 import TrackList from "../../Components/TrackList";
+import { Hoops } from "../../images";
 import { Album, TrackInfo } from "../../typings";
 import { fetchAlbums } from "../../utils/fetchAlbums";
 import { fetchTrackInfo } from "../../utils/fetchTrackInfo";
@@ -25,7 +25,24 @@ type Props = {
         </Head>
 
         <section>
-           <Navbar_2 />        
+        <nav className='w-full z-10 sticky top-0'>
+        <div className='flex justify-between items-center max-w-7xl mx-auto text-white p-8'>
+            {/* Left section */}
+            <div className='relative w-12 h-12 hover:cursor-pointer hover:animate-pulse'>
+                <Link href='/'>
+                    <Image src={Hoops} objectFit='contain' layout='fill' />
+                </Link>
+            </div>
+            {/* Right section */}
+            <ul className='flex space-x-4 text-2xl navigation'>
+                <li>
+                    <Link href='/'>
+                        Return Home
+                    </Link>
+                </li>
+            </ul>
+        </div>
+    </nav>
           <TrackList albums={albums} trackInfo={trackInfo} />
         </section>
 
